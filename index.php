@@ -92,22 +92,64 @@
            }
 
            $lion = new Animal("Lion", "Roar", 4, ["Meet", "Water", "Bones", "Fish"]);
-           $lion->details();
+        //    $lion->details();
            // php object oriented programming end from here
 
 
         //    php constant 
         // define("FIRST_CONSTANT", "<br> This is my first constant of with php. So, be careful."); // const with case-sensetive bydefault.
 
-        define("first", "<br> This is my first constant of with php. So, be careful.", true); // const with case-insensetive.
+        // define("first", "<br> This is my first constant of with php. So, be careful.", true); // const with case-insensetive.
 
-        echo first;
+        // echo first;
 
 
         // php const with const keyword 
         const MYCAR = [1, 2, 3, 4, 5, 6];
-        echo MYCAR[1];
+        // echo MYCAR[1];
 
+
+        // learning predefiened constants 
+        // echo "<br>" . __FILE__;
+        // phpinfo();
+
+
+        // php switch case learning
+
+
+        function  checkCGPA($gpa, $startRange, $endRange) : bool {
+            if($gpa >= $startRange && $gpa <= $endRange) {
+                return true;
+            }
+            return false;
+        }
+
+        $cgpa = 4.5;
+        switch ($cgpa) {
+            case checkCGPA($cgpa, 0, 1.9):
+                echo "Failed";
+                break;
+                
+            case checkCGPA($cgpa, 2.0, 3.5):
+                echo "B";
+                break;
+            
+            case checkCGPA($cgpa, 3.6, 4.5):
+                echo "A";
+                break;
+            
+            case checkCGPA($cgpa, 4.6, 4.9):
+                echo "A-";
+                break;
+            
+            case checkCGPA($cgpa, 5.0, 6.0):
+                echo "A+";
+                break;
+
+            default:
+                echo "There are not any record for your result!";
+                break;
+        }
         ?>
     </div>
 </body>
