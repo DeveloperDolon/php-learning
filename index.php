@@ -193,11 +193,24 @@
 
             unset($addingItemsOnArray2["Education"], $addingItemsOnArray2["age"]); // removing associate array element with unset method
             array_splice($addingItemsOnArray2, 1, 2); // removing associate array items with array_splice method
-            
+        
+            // var_dump($addingItemsOnArray2);
 
-            var_dump($addingItemsOnArray2);
+            echo "<br>";
+
+            // array sorting method learning with php 
+            $numbersArr = ["D", "C", "A", "B"];
+            $numbersArr2 = ["A" => 1, "F" => 2, "D" => 4, "C" => 3, "K" => 5];
+
+            // asort($numbersArr2); // associate array sorting as ascending order as value 
+            // ksort($numbersArr2); // associate array sorting as ascending order as key
+            // arsort($numbersArr2); // associate array sorting as descending order as value 
+            krsort($numbersArr2); // associate array sorting as descending order as key
+
+            // sort($numbersArr); // sort array in ascending order
+            // rsort($numbersArr); // sort array in descending order
+            var_dump($numbersArr2);
             
-                
         ?>
     </div>
 </body>
