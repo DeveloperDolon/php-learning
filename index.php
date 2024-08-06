@@ -209,7 +209,26 @@
 
             // sort($numbersArr); // sort array in ascending order
             // rsort($numbersArr); // sort array in descending order
-            var_dump($numbersArr2);
+            // var_dump($numbersArr2);
+
+
+
+            // php multidiamention array learning
+            $userInfo = [
+                ["Dolon Chandra Roy", 23, "Junior Software Engineer", "Student"],
+                ["Durjoy Chandra Roy", 19, "Health Checkup Unit", "Student"],
+                ["Sourav Halder", 27, "Fullstack Web Developer", "Student"],
+                ["Nihar Mondol", 27, "Fullstack Web Developer", "Student"]
+            ];
+
+            for ($i=0; $i < count($userInfo); $i++) { 
+                
+                for ($j=0; $j < count($userInfo[$i]); $j++) { 
+                    echo $userInfo[$i][$j] . " ";
+                }
+                echo "<br>";
+
+            }
             
         ?>
     </div>
