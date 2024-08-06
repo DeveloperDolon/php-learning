@@ -183,9 +183,19 @@
             $addingItemsOnArray2["Education"] = "Bachelor of Science";
             $addingItemsOnArray2 += ["wife" => "Sarna Sarkar", "Mother" => "Shikha Rani", "Father" => "Kashab Chandra Roy"];
 
+            //  removing array items method learning 
+            var_dump($addingItemsOnArray);  
+            echo "<br>";
+            array_splice($addingItemsOnArray, 1, 3); // for remove multiple items on an array
+            unset($addingItemsOnArray[2]); // for remove a item with unset() method
+            var_dump($addingItemsOnArray);
+            echo "<br>";
+
+            unset($addingItemsOnArray2["Education"], $addingItemsOnArray2["age"]); // removing associate array element with unset method
+            array_splice($addingItemsOnArray2, 1, 2); // removing associate array items with array_splice method
+            
+
             var_dump($addingItemsOnArray2);
-
-
             
                 
         ?>
