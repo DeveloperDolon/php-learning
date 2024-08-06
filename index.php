@@ -153,8 +153,40 @@
 
             foreach ($users as $key => $value) {
                 # code...
-                echo "<br>" . $key . "=" . $value;
+                // echo "<br>" . $key . "=" . $value;
             }
+
+
+            // update the array item with php
+            echo "<br>";
+            $brands = ["Toyota", "Yamaha", "Pulser", "Nissan"];
+            foreach($brands as &$x) {
+                $x = "Hello world";
+            }
+            unset($x); // unset method for ending update the reference of the array with foreach
+            $x = "Someting new";
+            
+            var_dump($brands);
+            echo "<br>";
+            // end of the update array item session
+
+
+            // adding items to the array in php
+            $addingItemsOnArray = ["Dolon", "Durjoy", "Rakhi"];
+            $addingItemsOnArray2 = ["name" => "Dolon Chandra Roy", "age" => 23, "Job" => "Junior Software Engineer"];
+
+            $addingItemsOnArray[1] = "Hello world";
+            echo "<br>";
+            $addingItemsOnArray[] = "Something new to the array"; // to add a single item on the array
+            array_push($addingItemsOnArray, "Sarna Sarkar", "Sagor Sarkar"); // to add multiple item on the array
+
+            $addingItemsOnArray2["Education"] = "Bachelor of Science";
+            $addingItemsOnArray2 += ["wife" => "Sarna Sarkar", "Mother" => "Shikha Rani", "Father" => "Kashab Chandra Roy"];
+
+            var_dump($addingItemsOnArray2);
+
+
+            
                 
         ?>
     </div>
