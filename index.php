@@ -227,10 +227,47 @@
                     echo $userInfo[$i][$j] . " ";
                 }
                 echo "<br>";
-
             }
-            
+
+
+            // learning php global variables 
+            echo "<br> <br>";
+
+            $myVar = 56;
+            function myFunc() {
+                // echo $GLOBALS["myVar"];
+
+                $GLOBALS["ab"] = 34;
+
+                global $myVar;
+                echo $myVar;
+            }
+
+
+          
+            myFunc();
+
+            echo "<br>";
+
+            echo $ab;
+
+
+            echo "<br>";
+
+
+            // echo $_SERVER["PHP_SELF"];
+
+            // echo $_SERVER['PHP_SELF'];
+            // echo $_SERVER['SERVER_NAME'];
+            // echo $_SERVER['HTTP_HOST'];
+            // echo $_SERVER['HTTP_REFERER'];
+            // echo $_SERVER['HTTP_USER_AGENT'];
+            // echo $_SERVER['SCRIPT_NAME'];
+                        
         ?>
+
+
+        <!--  -->
     </div>
 </body>
 </html>
