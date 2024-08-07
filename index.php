@@ -267,7 +267,24 @@
         ?>
 
 
-        <!--  -->
+        <!-- php from handling with html  -->
+         <form action="<?php echo $_SERVER["PHP_SELF"]?>" method="post">
+            <label for="name">Input your name </label>
+            <input type="text" name="name" id="">
+            <input type="submit" value="Submit">
+         </form>
+
+         <?php 
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                
+                $name = htmlspecialchars($_REQUEST["name"]);
+                if(empty($name)) {
+                    echo "<h3> There has no any user name</h3>";
+                } else {
+                    echo "<h3>The user name is : $name</h3>";
+                }
+            }
+         ?>
     </div>
 </body>
 </html>
