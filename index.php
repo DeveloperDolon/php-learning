@@ -286,8 +286,10 @@
                 echo "<h3>The user name is : $name</h3>";
             }
         }
-        ?>
 
+
+        ?>
+        
         <a href="demo_profile.php?subject=PHP&web=W3schools.com">Test $GET</a>
 
     </div>
