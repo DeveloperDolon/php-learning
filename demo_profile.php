@@ -7,9 +7,7 @@
 </head>
 <body>
     <?php 
-
         echo "The subject is : " . $_REQUEST['subject'] . ", and the web link is : " . $_REQUEST['web'];
-
     ?>
 </body>
 </html>
